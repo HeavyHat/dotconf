@@ -97,6 +97,7 @@ install_package ack
 install_package hub
 install_package fzf
 install_package curl
+install_package tree
 install_package vim-nox vim
 install_package cookiecutter
 with_confirmation "Would you like to install oh-my-zsh?" install_omz
