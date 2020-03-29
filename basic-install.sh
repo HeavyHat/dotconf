@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 DRY_RUN=0
 NOT_UPDATED=1
@@ -75,7 +75,7 @@ function with_confirmation() {
 	echo    # (optional) move to a new line
 	if [[ $REPLY =~ ^[Yy]$ ]]
 	then
-		${*:2}		
+		${*:2}
 	fi
 }
 
