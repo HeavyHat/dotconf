@@ -1,0 +1,54 @@
+[user]
+	name = "{{cookiecutter.full_name}}"
+	email = "{{cookiecutter.email}}"
+	username = "{{cookiecutter.git_username}}"
+[core]
+	editor = vim
+	whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+	excludesfile = ~/.gitignore
+[help]
+	autocorrect = 1
+[rerere]
+	enabled = 1
+	autoupdate = 1
+[push]
+	default = matching
+[color]
+	ui = auto
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[gitflow "prefix"]
+	feature = feature-
+	release = release-
+	hotfix = hotfix-
+	support = support-
+	versiontag = v
+[alias]
+	standup = log --since "yesterday" --oneline --branches=* --author=${username}
+	standup-all = log --since "yesterday" --oneline --branches=* 
+	weekly-work = log --since "7 days ago" --oneline --branches=* --author=${username}
+	weekly-work-all = log --since "7 days ago" --oneline --branches=* 
+	show-commits = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+	list-aliases = "!git config -l | grep alias | cut -c 7-"
+	flielog = log -u
+	graph = log --oneline --all --graph --decorate
+	discard = checkout --
+	unadd = reset HEAD
+	staged = diff --staged
+	amend = commit --amend
