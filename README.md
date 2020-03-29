@@ -14,12 +14,12 @@ When you run the script it will ask for confirmation at each step and you can op
 
 **via curl**
 ```bash
-sh $(curl -fsSL "https://github.com/HeavyHat/dotconf/master/install.sh")
+sh $(curl -fsSL "https://raw.githubusercontent.com/HeavyHat/dotconf/master/install.sh")
 ```
 
 **via wget**
 ```bash
-sh $(wget -O- "https://github.com/HeavyHat/dotconf/master/install.sh")
+sh $(wget -O- "https://raw.githubusercontent.com/HeavyHat/dotconf/master/install.sh")
 ```
 
 ## Contents
